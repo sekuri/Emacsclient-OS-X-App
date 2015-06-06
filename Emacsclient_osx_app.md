@@ -13,7 +13,7 @@ There are 3 files: document.wflow.applescript, myemacs_bash and myemacs.
 ## Installation
 This has been tested on Yosemite and (Cocoa) Emacs.app v24.5.1
 ### document.wflow.applescript
-- Create an app with Automator.
+- Launch Automator to create an app.
 - Select Applescript action.
 - Paste this applescript in the Automator applescript action window to replace "(* Your script goes here *)".
 - It looks for the application iTerm2 to run "myemacs" in. If it doesn't find iTerm2, it defaults to the Terminal application.

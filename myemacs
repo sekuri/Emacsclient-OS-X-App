@@ -1,10 +1,8 @@
 #!/opt/local/bin/bash
 # Save this script, e.g., in $HOME/Documents/github/3f7de1a860098257ab81/myemacs
 #
-# This script will be used by the command line alias "myemacs" or by the Automator applescript app to launch a
-#+ GUI Emacsclient on MacOSX.
-#
-# It can also be launched from the command line, accepts filenames as input and runs in the background. It will 
+# This script can be launched from the command line, or by the Automator applescript app to launch a
+#+ GUI Emacsclient on MacOSX. It accepts filenames as input and runs in the background. It will 
 #+ launch an Emacs daemon if one is not running already (by the alternate-editor="" option). The $PATH is modified 
 #+ only in this shell to launch the GUI-supporting Cocoa version of the Emacs daemon. If no filename input is provided 
 #+ an Emacs client GUI will launch (-c option) with the scratch buffer active. If multiple filenames are provided, all 

@@ -1,8 +1,8 @@
 #!/opt/local/bin/bash
 # Add below to, or source it from, .bashrc or .bash_profile.
-# Change below with correct path to accompanying myemacs script.
-# "myemacs" alias below will be used for convenience to launch either from command line,
-#+ e.g. myemacs filename(s), or by the Automator applescript app
+# Change below with correct path to myemacs script.
+# "myemacs" alias below will be used for convenience. $PATH can equally be modified to
+#+ point to the myemacs script.
 #
 # If you don't want to make emacsclient as the default editor, you don't need the first 2
 #+ lines. Just alias myemacs to the path of the myemacs script file. 

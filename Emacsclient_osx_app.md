@@ -26,4 +26,5 @@ This script can also be launched from the command line, accepts filename(s) as i
 
 ### myemacs_bash
 
-"myemacs_bash" is a bash script that can be sourced from, or simply pasted into, .bashrc or .bash_profile.It defines "myemacs" as an alias for convenience to launch from command line, e.g. myemacs filename(s), and by the app created in Automator. Change the path to the "edit" script with the correct one.
+"myemacs_bash" is a bash script that can be sourced from, or simply pasted into, .bashrc or .bash_profile.It defines "myemacs" as an alias for convenience to launch from command line, e.g. myemacs filename(s), and by the app created in Automator. Change the path to the "edit" script with the correct one. 
+

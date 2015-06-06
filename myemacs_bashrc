@@ -1,0 +1,10 @@
+#!/opt/local/bin/bash
+# Add below to, or source it from, .bashrc or .bash_profile.
+# Change below with correct path to accompanying edit script.
+# "myemacs" alias below will be used for convenience to launch either from command line,
+#+ e.g. myemacs filename(s), or by the Automator applescript app
+
+# Set Emacs as default editor
+export EDITOR=$HOME/Documents/github/3f7de1a860098257ab81/edit
+export VISUAL="$EDITOR"
+alias myemacs="$EDITOR"

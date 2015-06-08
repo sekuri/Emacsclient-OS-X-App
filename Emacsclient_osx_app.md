@@ -16,7 +16,6 @@ This has been tested on Yosemite and (Cocoa) Emacs.app v24.5.1
 - Launch Automator to create an app.
 - Select Applescript action.
 - Paste this applescript in the Automator applescript action window to replace "(* Your script goes here *)".
-- It looks for the application iTerm2 to run "myemacs" in. If it doesn't find iTerm2, it defaults to the Terminal application.
 - Call this app, e.g. MyEmacs.app. It will launch a graphical emacsclient.
 
 ### myemacs

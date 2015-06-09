@@ -1,5 +1,5 @@
 #!/opt/local/bin/bash
-# Save this script, e.g., in $HOME/Documents/github/3f7de1a860098257ab81/myemacs
+# Save this script, e.g., in $HOME/Documents/github/myemacsclient/3f7de1a860098257ab81/myemacs
 #
 # This script can be launched from the command line, or by the Automator applescript app to launch a
 #+ GUI Emacsclient on MacOSX. It accepts filenames as input and runs in the background. It will 

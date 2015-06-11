@@ -20,7 +20,7 @@ This has been tested on Yosemite and (Cocoa) Emacs.app v24.5.1
 
 ### myemacs
 
-"myemacs" is a bash script that can be called from the command line. $PATH can be modified to point to it. It is also called from within the Automator app created. Save it in, e.g., in $HOME/Documents/github/myemacsclient/3f7de1a860098257ab81/myemacs.
+"myemacs" is a bash script that can be called from the command line. $PATH can be modified to point to it. It is also called from within the Automator app created. Save it in, e.g., in $HOME/Documents/github/myemacsclient/myemacs.
 
 It accepts filename(s) as input and runs in the background. It will launch an Emacs daemon if one is not running already (by the alternate-editor="" option). The $PATH is modified only in this shell to launch the GUI-supporting Cocoa version of the Emacs daemon. If no filename input is provided an Emacs client GUI will launch (-c option) with the scratch buffer active. If multiple filenames are provided, all files are loaded into buffer and each can be made visible by selection with C-x b. If an emacsclient is already launched, new files will be loaded as buffers in the existing client GUI. Change the path to Emacs.app with the correct one.
 

@@ -8,6 +8,6 @@
 #+ lines. Just alias myemacs to the path of the myemacs script file. 
 
 # Set Emacs as default editor
-export EDITOR=$HOME/Documents/github/myemacsclient/3f7de1a860098257ab81/myemacs
+export EDITOR=$HOME/Documents/github/myemacsclient/myemacs
 export VISUAL="$EDITOR"
 alias myemacs="$EDITOR"

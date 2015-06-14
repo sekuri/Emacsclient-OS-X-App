@@ -10,13 +10,14 @@
 		set allWindows to every window
 		repeat with thisWindow in allWindows
 			set allTabs to {}
-			if exists tab in thisWindow then -- Handle Terminal weirdness since 1 window, 0 tabs possible
+			try -- Handle possibility of window w/o tabs, e.g. when running command not in shell
 				set allTabs to every tab of the thisWindow
-			end if
+			end try
 			repeat with thisTab in allTabs
-				-- For whatever reason, we can't use 'busy' for test below; Terminal says tabs always busy
-				-- So count processes. If not busy, should only be 2 (login & bash)
-				if (count of (get processes of thisTab)) is equal to 2 then
+				-- Can't use 'busy' for test below. If shell is active then always busy at least \
+				-- running login & bash. So OK to use if only those 2 processes running.
+				set procs to (get processes of thisTab)
+				if (count of procs) is equal to 2 and procs contains "login" and procs contains "bash" then
 					set selected of thisTab to true
 					set targetWindow to thisWindow
 					exit repeat

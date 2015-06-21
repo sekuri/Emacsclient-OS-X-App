@@ -10,6 +10,6 @@
 # Set Emacs as default editor
 export EDITOR=$HOME/Documents/github/myemacsclient/myemacs
 export VISUAL="$EDITOR"
-export SUDO_EDITOR="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor='' -c"
+export SUDO_EDITOR="$EDITOR"
 alias myemacs="$EDITOR"
 alias sudoedit="sudo -e"

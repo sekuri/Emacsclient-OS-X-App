@@ -13,8 +13,11 @@
 export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
 
 client_exists=`pgrep emacsclient`
+PUID=`ps -j $PPID | awk 'NR>1{ print $1 }'`
 
-if [ -z "$client_exists" ]; then
+if [ $PUID = "root" ]; then # if parent user=root, launch separate client window and don't release shell for safety
+    exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor="" -c "$@"
+elif [ -z "$client_exists" ]; then
     exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor="" -c "$@" &
 else
     exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient "$@" &

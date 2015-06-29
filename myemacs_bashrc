@@ -4,6 +4,9 @@
 # "myemacs" alias below will be used for convenience. $PATH can equally be modified to
 #+ point to the myemacs script.
 #
+# "myemacs" also defaults to the sudo editor - remove SUDO_EDITOR variable and sudoedit
+#+ alias if that's not what you want.
+#
 # If you don't want to make emacsclient as the default editor, you don't need the first 2
 #+ lines. Just alias myemacs to the path of the myemacs script file. 
 

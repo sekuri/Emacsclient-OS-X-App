@@ -5,10 +5,11 @@ by: Sekuri
 ## Introduction
 This is a guide to build a Mac OS X application to run emacs as a daemon and emacsclient in graphical mode instead of in the terminal.
 
-There are 3 files: document.wflow.applescript, myemacs_bash and myemacs.
+There are 4 files: document.wflow.applescript, myemacs_bash, myemacs and Emacs.icns.
 - document.wflow.applescript: This is the applescript that should be pasted in the Automator applescript action window to replace "(* Your script goes here *)". The application can be called MyEmacs.app
 - myemacs: This is a bash script that calls the graphical emacsclient.
 - my_emacs_bash: This is a bash script that can be sourced from, or simply pasted into, .bashrc or .bash_profile.
+- Emacs.icns: This is the icons file that you can use instead of the default from Apple's Automator in the Resources directory of the app.
 
 ## Installation
 This has been tested on Yosemite and (Cocoa) Emacs.app v24.5.1

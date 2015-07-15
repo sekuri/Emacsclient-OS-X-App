@@ -9,13 +9,15 @@
 #+ files are loaded into buffer and each can be made visible by selection with C-x b. If an emacsclient is already
 #+ launched, new files will be loaded as buffers in the existing client GUI. Change below with correct path to
 #+ Emacs.app
+# Special consideraion is given if the parent process user is root, e.g. when using sudoedit. In this case, a separate
+#+ emacsclient frame is launched and shell is not released until frame is killed.
 
 export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
 
 client_exists=`pgrep emacsclient`
 PUID=`ps -j $PPID | awk 'NR>1{ print $1 }'`
 
-if [ $PUID = "root" ]; then # if parent user=root, launch separate client window and don't release shell for safety
+if [ $PUID = "root" ]; then # if parent user=root, launch separate client frame and don't release shell for safety
     exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor="" -c "$@"
 elif [ -z "$client_exists" ]; then
     exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor="" -c "$@" &

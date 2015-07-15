@@ -28,3 +28,7 @@ It accepts filename(s) as input and runs in the background. It will launch an Em
 ### myemacs_bash
 
 "myemacs_bash" is a bash script that can be sourced from, or simply pasted into, .bashrc or .bash_profile. Here, it defines "myemacs" as an alias for convenience to launch from command line, e.g. myemacs filename(s). This would not be necessary if your $PATH points to "myemacs" script. It also sets environment variables $EDITOR and $VISUAL to default to emacsclient (this is not necessary). Change the path to the "myemacs" script with the correct one. 
+
+### Emacs.icns
+
+Use to give the app the familiar Emacs set of icons to its appearance in Finder. Rename it to "AutomatorApplet.icns" and replace the default one in the Contents/Resources folder of the app. 

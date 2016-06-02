@@ -28,5 +28,8 @@
 		if targetWindow is {} then
 			set targetWindow to do script "" -- If all tabs are busy, launch new window
 		end if
+		tell application "System Events"
+		    keystroke "c" using {control down}
+		end tell
 		do script "myemacs " & p in targetWindow
 	end tell

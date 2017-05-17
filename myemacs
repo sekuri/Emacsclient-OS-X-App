@@ -12,15 +12,10 @@
 # Special consideraion is given if the parent process user is root, e.g. when using sudoedit. In this case, a separate
 #+ emacsclient frame is launched and shell is not released until frame is killed.
 
-export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
-
-client_exists=`pgrep emacsclient`
 PUID=`ps -j $PPID | awk 'NR>1{ print $1 }'`
 
 if [ $PUID = "root" ]; then # if parent user=root, launch separate client frame and don't release shell for safety
-    exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor="" -c "$@"
-elif [ -z "$client_exists" ]; then
-    exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient --alternate-editor="" -c "$@" &
+    exec /opt/local/bin/emacsclient --alternate-editor="" -c "$@"
 else
-    exec /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient "$@" &
+    exec /opt/local/bin/emacsclient --alternate-editor="" -c "$@" &
 fi

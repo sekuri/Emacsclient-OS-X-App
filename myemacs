@@ -1,15 +1,11 @@
 #!/opt/local/bin/bash
 # Save this script, e.g., in $HOME/Documents/github/myemacsclient/myemacs
 #
-# This script can be launched from the command line, or by the Automator applescript app to launch a
-#+ GUI Emacsclient on MacOSX. It accepts filenames as input and runs in the background. It will 
-#+ launch an Emacs daemon if one is not running already (by the alternate-editor="" option). The $PATH is modified 
-#+ only in this shell to launch the GUI-supporting Cocoa version of the Emacs daemon. If no filename input is provided 
+# This script can be launched from the command line. It accepts filenames as input and runs in the background. It will 
+#+ launch an Emacs daemon if one is not running already (by the alternate-editor="" option). If no filename input is provided 
 #+ an Emacs client GUI will launch (-c option) with the scratch buffer active. If multiple filenames are provided, all 
-#+ files are loaded into buffer and each can be made visible by selection with C-x b. If an emacsclient is already
-#+ launched, new files will be loaded as buffers in the existing client GUI. Change below with correct path to
-#+ Emacs.app
-# Special consideraion is given if the parent process user is root, e.g. when using sudoedit. In this case, a separate
+#+ files are loaded into buffer and each can be made visible by selection with C-x b. 
+# Special consideration is given if the parent process user is root, e.g. when using sudoedit. In this case, a separate
 #+ emacsclient frame is launched and shell is not released until frame is killed.
 
 PUID=`ps -j $PPID | awk 'NR>1{ print $1 }'`
